@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(209, 198, 198);
+}
+/* hover effects on card slots */
+
+.cardSlot:hover .traingle::after {
+  transform: scaleX(1);
+  border-bottom: 12px solid green;
+}
+
+.cardSlot:hover .traingle::before {
+  transform: scaleX(1);
+  opacity: 1;
+  height: 100%;
+}
+
+.cardSlot:hover .cardPic::before {
+  z-index: 2;
+  color: white;
+}
+
+.cardSlot:hover .cardPic::after {
+  z-index: 1;
+}
+
+.cardSlot:hover .cardPic img {
+  transform: scale(1.1);
+}
+/* traingle on the block */
+
+.traingle::after {
+  content: " ";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translate(-50%);
+  transform: scaleX(0.7);
+  border-left: 12px solid transparent;
+  border-bottom: 12px solid white;
+  border-right: 12px solid transparent;
+  transition: 0.6s all ease-in-out;
+}
+/* elements in traingle box  or card body section   */
+
+.traingle h3 {
+  color: rgb(27, 5, 104);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.cardSlot:hover .traingle h3 {
+  color: white;
+}
+
+.traingle a {
+  text-decoration: none;
+}
+
+.traingle {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: white;
+  position: relative;
+  z-index: 1;
+}
+/* color on hover in traingle*/
+
+.traingle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80%;
+  background-color: green;
+  z-index: -1;
+  transform: scaleX(0.8);
+  transition: all ease-in-out 0.6s;
+  opacity: 0;
+}
+/* watermark in traingle  */
+
+.watermark {
+  position: absolute;
+  top: 22px;
+  right: 23px;
+  color: rgb(162, 162, 173);
+  font-weight: bold;
+  font-size: 3rem;
+  opacity: 0.6;
+}
+/* image in card or Image Section */
+
+.cardPic {
+  position: relative;
+  overflow: hidden;
+}
+
+.cardPic img {
+  transition: all 0.6s ease-in-out;
+}
+/* plus sign on image  */
+
+.cardPic::before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 100px;
+  z-index: -1;
+  color: white;
+  transform: translate(-60%, -70%);
+}
+/* dark backgroud on image */
+
+.cardPic::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+/* slick slider */
+
+.one-time {
+  position: relative;
+}
+
+.one-time .pArrow,
+.one-time .nArrow {
+  background-color: green;
+  color: white;
+  display: block;
+  text-align: center;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+}
+
+.one-time .pArrow:hover,
+.one-time .nArrow:hover {
+  transition: all 0.2s ease-in-out;
+  width: 50px;
+}
+
+.pArrow {
+  position: absolute;
+  right: 55px;
+  top: -40px;
+}
+
+.nArrow {
+  position: absolute;
+  top: -40px;
+  right: 0;
+}
+
+/* carousal */
+#carousal{
+  margin-top: 7rem;
+}
+/* the slides */
+.slick-slide {
+  margin: 0 10px;
+}
+.slick-list {
+  margin: 0 -10px;
+}
+
+/* card body  */
+.card .card-body {
+  position: relative;
+  z-index: 1;
+}
+
+.card .card-body::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80%;
+  background-color: green;
+  z-index: -1;
+  transform: scaleX(0.8);
+  transition: all ease-in-out 0.5s;
+  opacity: 0;
+}
+.card:hover .card-body::after {
+  transform: scaleY(1);
+  opacity: 1;
+  height: 100%;
+}
